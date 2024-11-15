@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Html</title>
+    <style>
+        body {
+         font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+         
+         background-color: lightgrey;
+        }
+
+       .head{
+          height: 100px;
+          width: 18rem;
+          display: flex;
+          background-color: blue;
+       }
+      .picture{
+        height: 100px;
+        
+      }
+      .main-content{
+        height: 100px;
+        width: 100%;
+        position: absolute;
+        display: flex;
+        top: 300px;
+        background-color: red;
+      }
+       section#fun-facts {
+         padding: 20px;
+         
+        }
+
+     label {
+         font-weight: bold;
+        }
+
+     select {
+         margin-left: 10px;
+          padding: 5px;
+        }
+
+      .info {
+      margin-top: 20px;
+        text-align: left;
+        }
+
+      .info-detail {
+          display: none;
+        }
+
+       footer {
+          background-color: #4c4c4c;
+        color: white;
+          padding: 10px;
+           position: fixed;
+          bottom: 0;
+         width: 100%;
+        }
+    </style>
+</head>
+<body>
+    
+      <div class="head">
+        <!-- <img src="./poster.jpeg" alt="poster"> -->
+         <div class="icons">
+          <img src="./laptop.png" alt="" class="picture">
+         </div>
+         <div class="title"></div>
+         <div class="icons">
+          <img src="./groupp.png" alt="" class="picture">
+         </div>
+      </div>
+    
+    <div class="main-content">
+    <section id="fun-facts">
+        <label for="animal-select">Choose an animal:</label>
+        <select id="animal-select" onchange="showInfo()">
+            <option value="">--Select an Animal--</option>
+            <option value="tiger">Tiger</option>
+            <option value="cat">Cat</option>
+            <option value="dog">Dog</option>
+            <option value="zebra">Zebra</option>
+            <option value="cow">Cow</option>
+        </select>
+
+        <div class="info">
+            <div id="tiger" class="info-detail">
+                <h2>Tiger</h2>
+                <p>Tigers are big cats with orange fur and black stripes. They are very strong and like to be alone in the wild.</p>
+            </div>
+
+            <div id="cat" class="info-detail">
+                <h2>Cat</h2>
+                <p>Cats are small pets that have been living with people for a long time. ...They can see well in the dark and love to play.</p>
+            </div>
+           <div id="dog" class="info-detail">
+                <h2>Dog</h2>
+              <p>Dogs are loyal pets and can help with many things like playing and guarding.... They have  great sense smell</p>
+            </div>
+
+          <div id="zebra" class="info-detail">
+           <h2>Zebra</h2>
+               <p>Zebras are animals with black and white stripes. Each zebra has its own unique pattern of stripes.</p>
+            </div>
+          <div id="cow" class="info-detail">
+                <h2>Cow</h2>
+                <p>Cows are big farm animals that give us milk. They have four stomachs and can eat a lot of grass every day.</p>
+            </div>
+        </div>
+    </section>
+  </div>
+ <script>
+        function showInfo() {
+            var select = document.getElementById("animal-select");
+            var selectedValue = select.value;
+            if (selectedValue) {
+              document.getElementById(selectedValue).style.display = "block";
+            }
+        }
+    </script>
+    <footer>
+        <p> Made By Ganesh Pendhare. still 20% work is remain.</p>
+    </footer>
+</body>
+</html>
